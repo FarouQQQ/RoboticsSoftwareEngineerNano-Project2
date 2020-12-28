@@ -44,7 +44,7 @@ void process_image_callback(const sensor_msgs::Image img)
     for(int i = 0; i < im_size; i+=2)
     {
         //check if 2 similtanious cells are white
-        if((img.data[i] == white_pixel) && (img.data[i+1] == white_pixel))
+        if((img.data[i] == white_pixel) && (img.data[i+1] == white_pixel) &&(img.data[i+2] == white_pixel))
         {
             //Get the vertical index of white cells
             vertical_index = i%img.step;

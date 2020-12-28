@@ -53,7 +53,7 @@ void process_image_callback(const sensor_msgs::Image img)
             if(vertical_index < (img.step/3))
             {
                 // left
-                drive_robot(0.5,1);
+                drive_robot(0,1);
             }else if(vertical_index <(img.step/3 *2))
             {
                 //center
@@ -61,7 +61,7 @@ void process_image_callback(const sensor_msgs::Image img)
             }else
             {
                 //right
-                drive_robot(0.5, -1);
+                drive_robot(0, -1);
             }
             ball_found = true;
             break;

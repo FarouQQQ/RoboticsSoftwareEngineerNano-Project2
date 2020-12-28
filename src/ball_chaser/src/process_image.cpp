@@ -41,7 +41,7 @@ void process_image_callback(const sensor_msgs::Image img)
     int im_size = img.height * img.step;
 
     //loop on the image 
-    for(int i = 0; i < im_size; i+=2)
+    for(int i = 0; i < im_size; i+=3)
     {
         //check if 2 similtanious cells are white
         if((img.data[i] == white_pixel) && (img.data[i+1] == white_pixel) &&(img.data[i+2] == white_pixel))
